@@ -1,0 +1,37 @@
+{
+  "name": "is-mutant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "aws-sdk": "2.534.0",
+    "lodash.get": "4.4.2",
+    "mongoose": "5.7.1",
+    "serverless-offline": "5.11.0"
+  },
+  "devDependencies": {
+    "eslint": "6.4.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "mocha": "6.2.0",
+    "nyc": "14.1.1",
+    "serverless-bundle": "1.2.5",
+    "webpack-node-externals": "1.7.2"
+  },
+  "scripts": {
+    "test": "serverless-bundle test --env node",
+    "cov": "serverless-bundle test --coverage  --reporters default --env node"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "functions/**/*.js",
+      "lib/**/*.js",
+      "./handler.js"
+    ]
+  },
+  "author": "Ronald Suez <ingrsuezinfo@gmail.com>",
+  "license": "MIT"
+}

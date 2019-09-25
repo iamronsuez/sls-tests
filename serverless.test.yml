@@ -1,0 +1,14 @@
+- name: test if a string chain does not match a mutant ADN
+  endpoint: {function: isMutant}
+  request:
+    body:
+      dna: ["ATGCGA", "CAGTGC", "TTAGGT", "AGATGG", "CGCCTA", "TCACTG"]
+  response:
+    body: '"Forbidden"'
+- name: test if a string chain match a mutant ADN
+  endpoint: {function: isMutant}
+  request:
+    body:
+      dna: ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
+  response:
+    body: '"OK"'

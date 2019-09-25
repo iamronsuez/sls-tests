@@ -1,0 +1,58 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: is-mutant
+# app and org for use with dashboard.serverless.com
+app: is-mutant
+org: iamronsuez
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  profile: personal
+  stage: dev
+  region: us-east-1
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - lambda:InvokeFunction
+      - lambda:InvokeAsync
+    Resource: "*"
+
+functions:
+  isMutant:
+    handler: functions/isMutant.default
+    events:
+      - http:
+          path: mutant
+          method: post
+  isMutantStats:
+    handler: functions/isMutantStats.default
+    events:
+      - http:
+          path: stats
+          method: get
+    environment:
+      DB: MONGO_ENV_URL
+  storeIsMutantCheck:
+    handler: functions/storeIsMutantCheck.default
+    environment:
+      DB: MONGO_ENV_URL
+
+plugins:
+  - serverless-offline ## local testing
+  - serverless-bundle ## offline testing jest
