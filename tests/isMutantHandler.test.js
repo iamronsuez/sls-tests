@@ -1,4 +1,5 @@
 import handlers from '../handler'
+// eslint-disable-next-line no-unused-vars
 import mockAwsSdk from '../__mocks__/aws-sdk'
 
 test("isMutant-handler should return Forbidden for non valid DNA", async () => {
@@ -23,7 +24,7 @@ test("isMutant-handler should return OK for  valid DNA", async () => {
 test("isMutant-handler should return BAD-Request for non valid DNA payload", async () => {
   const dna = 1;
   const event = {body: JSON.stringify({dna})}
-  const {statusCode, body } = await  handlers.isMutant(event)
+  const {statusCode } = await  handlers.isMutant(event)
   expect(statusCode).toEqual(400);
 });
 
@@ -31,7 +32,7 @@ test("isMutant-handler should return Internal-Server-Error for non valid DNA pay
   try {
     const dna = 1;
     const event = {body: {dna}}
-    const {statusCode, body } = await  handlers.isMutant(event)
+    const {statusCode } = await  handlers.isMutant(event)
     expect(statusCode).toEqual(500);
   } catch (error) {
     console.log(error)

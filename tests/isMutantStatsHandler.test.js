@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import mockMongoose from '../__mocks__/mongoose'
 import isMutantStats from '../functions/isMutantStats'
 
