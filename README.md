@@ -33,7 +33,9 @@ The REST API to the isMutant app is described below.
 
 `POST /mutant/`
 
-    curl -i -H 'Accept: application/json' -d '{"dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]}' https://zw456lih4a.execute-api.us-east-1.amazonaws.com/dev/mutant
+    curl -i -H 'Accept: application/json' \
+    -d '{"dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]}' \
+    https://zw456lih4a.execute-api.us-east-1.amazonaws.com/dev/mutant
 
 
 ### Response
@@ -51,7 +53,8 @@ The REST API to the isMutant app is described below.
 
 `GET /stats/`
 
-    curl -i -H 'Accept: application/json' https://zw456lih4a.execute-api.us-east-1.amazonaws.com/dev/stats
+    curl -i -H 'Accept: application/json' \
+    https://zw456lih4a.execute-api.us-east-1.amazonaws.com/dev/stats
 
 ### Response
 
