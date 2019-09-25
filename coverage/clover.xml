@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1569381824879" clover="3.2.0">
-  <project timestamp="1569381824879" name="All files">
+<coverage generated="1569383091055" clover="3.2.0">
+  <project timestamp="1569383091055" name="All files">
     <metrics statements="65" coveredstatements="61" conditionals="10" coveredconditionals="9" methods="18" coveredmethods="17" elements="93" coveredelements="87" complexity="0" loc="65" ncloc="65" packages="3" files="7" classes="7"/>
     <package name="is-mutant">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

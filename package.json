@@ -16,6 +16,7 @@
     "eslint": "6.4.0",
     "eslint-config-standard": "14.1.0",
     "eslint-plugin-import": "2.18.2",
+    "jest-coverage-badges": "1.1.2",
     "mocha": "6.2.0",
     "nyc": "14.1.1",
     "serverless-bundle": "1.2.5",
@@ -23,13 +24,16 @@
   },
   "scripts": {
     "test": "serverless-bundle test --env node",
-    "cov": "serverless-bundle test --coverage  --reporters default --env node"
+    "cov": "serverless-bundle test --coverage  --reporters default --env node && jest-coverage-badges"
   },
   "jest": {
     "collectCoverageFrom": [
       "functions/**/*.js",
       "lib/**/*.js",
       "./handler.js"
+    ],
+    "coverageReporters": [
+      "json-summary"
     ]
   },
   "author": "Ronald Suez <ingrsuezinfo@gmail.com>",
