@@ -16,7 +16,9 @@
     "eslint": "6.4.0",
     "eslint-config-standard": "14.1.0",
     "eslint-plugin-import": "2.18.2",
+    "husky": "3.0.5",
     "jest-coverage-badges": "1.1.2",
+    "lint-staged": "9.3.0",
     "mocha": "6.2.0",
     "nyc": "14.1.1",
     "serverless-bundle": "1.2.5",
@@ -35,6 +37,11 @@
     "coverageReporters": [
       "json-summary"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "author": "Ronald Suez <ingrsuezinfo@gmail.com>",
   "license": "MIT"
