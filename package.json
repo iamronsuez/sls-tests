@@ -46,7 +46,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-all lint:js:fix cov"
+      "pre-commit": "npm-run-all lint:js:fix test"
     }
   },
   "author": "Ronald Suez <ingrsuezinfo@gmail.com>",
