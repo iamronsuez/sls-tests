@@ -1,5 +1,7 @@
 # Is Mutant API
 
+[![Coverage Status](https://coveralls.io/repos/github/iamronsuez/sls-tests/badge.svg?branch=master)](https://coveralls.io/github/iamronsuez/sls-tests?branch=master)
+
 ## Requirements
 
     AWS account with proper permissions
