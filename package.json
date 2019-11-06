@@ -9,7 +9,7 @@
   "dependencies": {
     "aws-sdk": "2.534.0",
     "lodash.get": "4.4.2",
-    "mongoose": "5.7.1",
+    "mongoose": "5.7.5",
     "serverless-offline": "5.11.0"
   },
   "devDependencies": {
