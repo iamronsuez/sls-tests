@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "aws-sdk": "2.534.0",
+    "aws-sdk": "2.814.0",
     "lodash.get": "4.4.2",
     "mongoose": "5.7.1",
     "serverless-offline": "5.11.0"
