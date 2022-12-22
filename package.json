@@ -10,7 +10,7 @@
     "aws-sdk": "2.534.0",
     "lodash.get": "4.4.2",
     "mongoose": "5.7.1",
-    "serverless-offline": "5.11.0"
+    "serverless-offline": "12.0.3"
   },
   "devDependencies": {
     "coveralls": "3.0.6",
